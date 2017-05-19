@@ -5,7 +5,6 @@ target/
 *.zip
 *.tar
 *.tar.gz
-disconf/
 
 # eclipse ignore
 .settings/
