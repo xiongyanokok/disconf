@@ -233,7 +233,7 @@
                 </configuration>
             </plugin>
 
-            <plugin>
+            <!-- <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>2.3</version>
@@ -253,24 +253,11 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin> -->
         </plugins>
     </build>
 
     <name>disconf-client</name>
-    <url>https://github.com/knightliao/disconf/tree/master/disconf-client</url>
-    <description>https://github.com/knightliao/disconf/tree/master/disconf-client</description>
-
-    <organization>
-        <name>Baidu</name>
-        <url>http://www.example.com</url>
-    </organization>
-
-    <scm>
-        <url>scm:git:git@github.com:knightliao/disconf</url>
-        <connection>scm:git:git@github.com:knightliao/disconf</connection>
-        <tag>disconf-client</tag>
-    </scm>
 
     <profiles>
         <profile>
@@ -314,7 +301,7 @@
                                 </goals>
                             </execution>
                         </executions>
-                    </plugin> -->
+                    </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
@@ -328,7 +315,7 @@
                                 </goals>
                             </execution>
                         </executions>
-                    </plugin>
+                    </plugin> -->
                 </plugins>
             </build>
         </profile>

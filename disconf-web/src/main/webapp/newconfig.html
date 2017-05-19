@@ -25,13 +25,8 @@
                 <div class="nav-collapse collapse">
 
                     <a id="indexMain" href="/main.html" class="brand" style="margin-left:0px;"><span class="zu-top-nav-link">Disconf</span></a>
-                    <span class="span7"> </span>
-                    <form class="navbar-form pull-left">
-                        <button class="btn btn-warning" title="GitHub" type="button" style=""  onclick="window.open('https://github.com/knightliao/disconf', '_blank');">
-                            <i class="icon-circle-arrow-up  icon-white"></i> <b>GitHub</b>
-                        </button>
-                    </form>
                     
+                    <span class="span7"> </span>
                     
                     <ul class="nav pull-right" >
                         
@@ -116,24 +111,24 @@
                     <form id="form" action="/config/" method="post" enctype="multipart/form-data" class="private-form clearfix">
                         <h2 class="autoPush-detail-title">配置文件修改</h2>
                         <p class="private-item">
-                            <span class="private-item-key">APP id & 名称：</span>
-                            <span id="app" class="private-item-value">FFFF</span>
+                            <span class="private-item-key">APP名称：</span>
+                            <span id="app" class="private-item-value"></span>
                         </p>
                         <p class="private-item">
                             <span class="private-item-key">版本：</span>
-                            <span id="version"  class="private-item-value">FFFF</span>
+                            <span id="version"  class="private-item-value"></span>
                         </p>
                         <p class="private-item">
                             <span class="private-item-key">环境：</span>
-                            <span id="env" class="private-item-value">FFFF</span>
+                            <span id="env" class="private-item-value"></span>
                         </p>
                         <p class="private-item">
-                            <span class="private-item-key">配置文件名：</span>
-                            <span id="key" class="private-item-value">FFFF</span>
+                            <span class="private-item-key">文件名：</span>
+                            <span id="key" class="private-item-value"></span>
                         </p>
                         <div class="private-item clearfix">
-                            <span style="float:left" class="private-item-key">原配置文件内容：</span>
-                            <pre style="float:left" id="oldvalue" class="private-item-value-pre">FFFF</pre>
+                            <span style="float:left" class="private-item-key">文件内容：</span>
+                            <pre style="float:left;min-width:500px;" id="oldvalue" class="private-item-value-pre"></pre>
                         </div>
                         <div class="private-item clearfix">
                             <span style="float:left" class="private-item-key">上传配置：</span>
@@ -178,21 +173,6 @@
     </li>
 </div>
 
-
-<div id="footer">
-    <div class="container clearfix">
-        <div class="muted links pull-left">
-            <a href="#">关于</a>
-            <span class="sep">·</span>
-            <a href="https://github.com/knightliao/disconf" target="_blank">帮助</a>
-        </div>
-
-        <p class="muted credit pull-right">
-            © All Rights Reserved.
-        </p>
-
-    </div>
-</div>
 
 <script src="assets/js/jquery-1.11.0.js"></script>
 <script src="dep/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.js"></script>
