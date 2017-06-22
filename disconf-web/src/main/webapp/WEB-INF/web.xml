@@ -4,10 +4,6 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
     <display-name>disconf-web</display-name>
 
-    <welcome-file-list>
-        <welcome-file>main.html</welcome-file>
-    </welcome-file-list>
-    
     <session-config>
     	<session-timeout>1440</session-timeout>
     </session-config>
@@ -16,7 +12,7 @@
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:applicationContext.xml</param-value>
     </context-param>
-
+    
     <context-param>
         <param-name>spring.profiles.default</param-name>
         <param-value>production</param-value>
@@ -104,7 +100,7 @@
     </mime-mapping>
     
     <welcome-file-list>
-		<welcome-file>main.html</welcome-file>
+		<welcome-file>/main.html</welcome-file>
 	</welcome-file-list>
 
 </web-app>

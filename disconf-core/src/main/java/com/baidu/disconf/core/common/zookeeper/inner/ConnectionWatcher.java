@@ -83,7 +83,7 @@ public class ConnectionWatcher implements Watcher {
             if (!debug) {
 
                 // 这时收到这个信息，表示，ZK已经重新连接上了，但是会话丢失了，这时需要重新建立会话。
-                LOGGER.error("zk Expired");
+                LOGGER.info("zk Expired");
 
                 // just reconnect forever
                 reconnect();
