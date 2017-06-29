@@ -24,7 +24,7 @@
                     function (index, item) {
                         html += '<li role="presentation" role="menuitem" tabindex="-1"><a rel='
                             + item.id
-                            + ' href="#">APP: '
+                            + ' href="#">'
                             + item.name
                             + '</a></li>';
                     });
@@ -217,9 +217,9 @@
                 + '" data-placement="left">' + item.machineSize + '台 '
                 + isRight + '</a>'
 
-            return Util.string.format(mainTpl,'', item.appId,
+            return Util.string.format(mainTpl,'', item.appName,
                 item.version, item.envId, item.envName, type, item.key,
-                item.createTime, item.modifyTime, item.value, link,
+                item.createTime, item.modifyTime.replace(/^(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})$/, "$1-$2-$3 $4:$5:$6"), item.value, link,
                 del_link, i + 1, downloadlink, data_fetch_url, machine_url);
         }
     }
