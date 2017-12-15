@@ -16,8 +16,7 @@
             location="classpath*:/datasource-test.properties"
             ignore-unresolvable="true"/>
 
-    <bean id="dataSource2"
-          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <bean id="dataSource2" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="${driver_class_name}"/>
         <property name="url" value="${datasource_location}"/>
         <property name="username" value="{username}"/>
@@ -35,10 +34,10 @@
     </bean>
 
     <!-- Transaction config -->
-    <bean id="onedbTransactionManagerTest"
-          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+    <bean id="onedbTransactionManagerTest" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource2"/>
     </bean>
+    
     <tx:annotation-driven transaction-manager="onedbTransactionManagerTest"/>
 
 </beans>

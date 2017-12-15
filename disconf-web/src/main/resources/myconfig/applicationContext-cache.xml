@@ -12,16 +12,20 @@
                 <ref bean="redisClientDsp2"/>
             </list>
         </property>
-        <property name="retryTimes">   <!-- 多写随机读策略重试次数 -->
+        <!-- 多写随机读策略重试次数 -->
+        <property name="retryTimes">   
             <value>${redis.group1.retry.times}</value>
         </property>
-        <property name="evictorDelayCheckSeconds">   <!-- 失效检测器轮询检测时间间隔，此值大于0表示启用失效检测器 -->
+        <!-- 失效检测器轮询检测时间间隔，此值大于0表示启用失效检测器 -->
+        <property name="evictorDelayCheckSeconds">   
             <value>${redis.evictor.delayCheckSeconds}</value>
         </property>
-        <property name="evictorCheckPeriodSeconds">   <!-- 失效检测器延迟启动时间 -->
+        <!-- 失效检测器延迟启动时间 -->
+        <property name="evictorCheckPeriodSeconds">   
             <value>${redis.evictor.checkPeriodSeconds}</value>
         </property>
-        <property name="evictorFailedTimesToBeTickOut">  <!-- 失效检测器检测Ping-Pong心跳，连接失败次数超过这个值则剔除，直到心跳正常再恢复 -->
+        <!-- 失效检测器检测Ping-Pong心跳，连接失败次数超过这个值则剔除，直到心跳正常再恢复 -->
+        <property name="evictorFailedTimesToBeTickOut">  
             <value>${redis.evictor.failedTimesToBeTickOut}</value>
         </property>
     </bean>

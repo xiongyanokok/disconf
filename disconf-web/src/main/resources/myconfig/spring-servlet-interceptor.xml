@@ -6,7 +6,6 @@
 
 
     <mvc:interceptors>
-
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
             <bean class="com.baidu.dsp.common.interceptor.session.SessionInterceptor">

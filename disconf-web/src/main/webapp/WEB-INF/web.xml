@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
     <display-name>disconf-web</display-name>
-
+    
     <session-config>
     	<session-timeout>1440</session-timeout>
     </session-config>
@@ -55,6 +55,7 @@
         <servlet-name>default</servlet-name>
         <url-pattern>*.html</url-pattern>
     </servlet-mapping>
+    
     <servlet-mapping>
         <servlet-name>spring</servlet-name>
         <url-pattern>/</url-pattern>
@@ -64,6 +65,7 @@
         <servlet-name>spring</servlet-name>
         <url-pattern>/index</url-pattern>
     </servlet-mapping>
+
 
     <filter>
         <filter-name>HttpPutFormContentFilter</filter-name>
@@ -102,5 +104,5 @@
     <welcome-file-list>
 		<welcome-file>/main.html</welcome-file>
 	</welcome-file-list>
-
+    
 </web-app>

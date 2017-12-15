@@ -10,9 +10,7 @@
     <description>database数据源配置</description>
 
     <!-- onedb configure start -->
-
-    <bean id="onedbDataSource" abstract="true"
-          class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+    <bean id="onedbDataSource" abstract="true" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
         <property name="driverClass">
             <value>${jdbc.driverClassName}</value>
         </property>
@@ -45,8 +43,7 @@
         </property>
     </bean>
 
-    <bean id="vdb_one"
-          class="com.baidu.ub.common.dbmanage.datasource.VirtualDataSource">
+    <bean id="vdb_one" class="com.baidu.ub.common.dbmanage.datasource.VirtualDataSource">
         <property name="masterSet">
             <list>
                 <value>onedb_0</value>
@@ -73,12 +70,10 @@
             <ref local="onedbShardingRule"/>
         </property>
     </bean>
-    <bean id="onedbShardingRule"
-          class="com.baidu.ub.common.dbmanage.rule.SimpleDBShardingRuleImpl">
+    <bean id="onedbShardingRule" class="com.baidu.ub.common.dbmanage.rule.SimpleDBShardingRuleImpl">
         <property name="shardingNum" value="1"/>
     </bean>
-    <bean id="onedbMultiDSKeyContext"
-          class="com.baidu.ub.common.dbmanage.datasource.MultiDataSourceKeyContext">
+    <bean id="onedbMultiDSKeyContext" class="com.baidu.ub.common.dbmanage.datasource.MultiDataSourceKeyContext">
         <property name="router">
             <ref local="onedbRouter"/>
         </property>
@@ -90,12 +85,12 @@
     </bean>
     <!-- onedb configure end -->
 
-
     <!-- Transaction config -->
     <bean id="onedbTransactionManager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="onedbMultiDataSource"/>
     </bean>
+    
     <tx:annotation-driven transaction-manager="onedbTransactionManager"/>
 
 </beans>

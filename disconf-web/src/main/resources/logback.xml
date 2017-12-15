@@ -104,7 +104,6 @@
     </appender>
     
     <logger name="org.springframework" level="INFO"/>
-    
     <logger name="com.baidu" level="DEBUG"/>
     
     <root level="DEBUG">
